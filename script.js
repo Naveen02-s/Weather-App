@@ -16,7 +16,7 @@ async function checkWeather(city) {
 
   changeUnit.addEventListener('click', () => {
     if(changeUnit.innerHTML === '°F'){
-      tempInCelsius.innerHTML = `${(9/5*(Math.round(data.main.temp)) + 32)}°F`
+      tempInCelsius.innerHTML = `${Math.round((9/5*(Math.round(data.main.temp)) + 32))}°F`
       changeUnit.innerHTML = '°C'
     }
     else {
